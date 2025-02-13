@@ -1,0 +1,22 @@
+Schematic Ready
+Your image schematic ID is: f7e63268d186d4bcd08e97708ecd84ae14f70b176fcd11f8d08394a58f568fa5
+overlay:
+    image: siderolabs/sbc-rockchip
+    name: turingrk1
+customization:
+    systemExtensions:
+        officialExtensions:
+            - siderolabs/tailscale
+            - siderolabs/util-linux-tools
+First Boot
+
+Use the following disk image for Turing RK1:
+
+Disk Image
+    https://factory.talos.dev/image/f7e63268d186d4bcd08e97708ecd84ae14f70b176fcd11f8d08394a58f568fa5/v1.9.3/metal-arm64.raw.xz 
+
+Upgrading Talos Linux
+
+To upgrade Talos Linux on the machine, use the following image:
+factory.talos.dev/installer/f7e63268d186d4bcd08e97708ecd84ae14f70b176fcd11f8d08394a58f568fa5:v1.9.3
+
