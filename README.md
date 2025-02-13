@@ -4,8 +4,8 @@ TL;DR:
 
 * Talos Linux 1.9.3
 * TuringPi RK1 nodes x3 (8GB RAM)
-* [Talhelper|https://budimanjojo.github.io/talhelper]
-* [sops|https://github.com/getsops/sops] with [age|https://github.com/filoSottile/age]
+* [Talhelper](https://budimanjojo.github.io/talhelper)
+* [sops](https://github.com/getsops/sops) with [age](https://github.com/filoSottile/age)
 * 1Password with the op CLI
 
 ## What is this
@@ -15,4 +15,5 @@ TuringPi API/CLI.
 Chose to not go directly to IaC for this one to learn more and not abstract
 away everything right off the bat.
 
-Uses SOPS 
+Uses sops for secrets encryption with age as the encryption tool, secrets
+stored in 1Password and retrieved with the 1Password CLI.
