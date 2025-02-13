@@ -13,3 +13,4 @@ talosctl apply-config --insecure -n 192.168.1.44 --file clusterconfig/homecluste
 talosctl apply-config --insecure -n 192.168.1.108 --file clusterconfig/homecluster-node3.yaml
 talosctl --cluster homecluster -n 192.168.1.52 kubeconfig .
 talosctl patch mc --patch "$(sops --decrypt --age "$(cat public_age_keys.txt)" tailscale-config.sops.yaml)"
+talosctl -n node1 health
