@@ -8,7 +8,8 @@ sops --encrypt -i --age "$(cat public_age_keys.txt)" talsecret.sops.yaml
 talhelper genconfig
 cp clusterconfig/talosconfig ~/.talos/config
 talosctl apply-config --insecure -n 192.168.1.52 --file clusterconfig/homecluster-node1.yaml
+talosctl bootstrap --nodes 192.168.1.52
 talosctl apply-config --insecure -n 192.168.1.44 --file clusterconfig/homecluster-node2.yaml
 talosctl apply-config --insecure -n 192.168.1.108 --file clusterconfig/homecluster-node3.yaml
-talosctl --cluster homecluster -n 192.168.1.52 --talosconfig clusterconfig/talosconfig kubeconfig .
+talosctl --cluster homecluster -n 192.168.1.52 kubeconfig .
 talosctl patch mc --patch "$(sops --decrypt --age "$(cat public_age_keys.txt)" tailscale-config.sops.yaml)"
