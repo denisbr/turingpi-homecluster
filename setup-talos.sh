@@ -1,3 +1,4 @@
+#!/bin/sh
 brew install talhelper 1password-cli age sops talosctl ubi
 ubi -v --in ~/bin/ --project https://github.com/turing-machines/tpi/
 for nodenr in 1 2 3; do tpi flash -n $nodenr -i metal-arm64.raw; done
